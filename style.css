@@ -10,6 +10,8 @@ button{cursor:pointer}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.7px}
 .brand>span:last-child>span{color:var(--purple-2)}
 .brand-mark{width:30px;height:30px;border-radius:9px;background:var(--purple);display:grid;place-items:center;font-weight:800;color:#fff}
+.brand-logo{height:38px;width:auto;display:block}
+.footer-logo{height:32px;width:auto;display:block}
 .desktop-nav{display:flex;gap:28px;margin-left:auto}
 .desktop-nav a,.mobile-menu a{font-size:13px;color:#aaa4af;transition:.2s}
 .desktop-nav a:hover,.mobile-menu a:hover{color:#fff}

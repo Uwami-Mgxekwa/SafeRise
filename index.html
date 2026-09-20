@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070a">
+  <meta name="description" content="SafeRise — GBV awareness, education, resources and anonymous peer support.">
+  <title>SafeRise — You Are Not Alone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="SafeRise home">
+        <span class="brand-mark">S</span>
+        <span>Safe<span>Rise</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#learn">Learn</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#resources">Resources</a>
+        <a href="#support">Peer Support</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a class="header-help" href="#emergency">Get help</a>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#learn">Learn</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#resources">Resources</a>
+      <a href="#support">Peer Support</a>
+    </div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Awareness. Support. Safety.</div>
+          <h1>You deserve to feel <em>safe.</em></h1>
+          <p class="hero-text">
+            A simple space to learn about gender-based violence, understand your rights,
+            find support and discover safer next steps.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#learn">Start learning <span>→</span></a>
+            <a class="btn btn-ghost" href="#resources">Find resources</a>
+          </div>
+          <p class="prototype-note">Prototype • Works offline • No account required</p>
+        </div>
+
+        <div class="hero-panel" aria-label="Safety reminder">
+          <div class="panel-orb"><span>✦</span></div>
+          <p class="panel-label">A reminder</p>
+          <h2>What happened to you is not your fault.</h2>
+          <p>You are allowed to ask for help, set boundaries and seek a safer environment.</p>
+          <a href="#support">Explore anonymous support <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="quick-actions">
+        <a class="action-card emergency-card" href="#emergency">
+          <div class="action-icon">!</div>
+          <div><strong>Need help now?</strong><span>Emergency information &amp; immediate options</span></div>
+          <b>→</b>
+        </a>
+        <a class="action-card" href="#learn">
+          <div class="action-icon purple">◈</div>
+          <div><strong>Learn the signs</strong><span>Recognise unhealthy and abusive behaviour</span></div>
+          <b>→</b>
+        </a>
+        <a class="action-card" href="#quiz">
+          <div class="action-icon purple">?</div>
+          <div><strong>Take the quiz</strong><span>Test what you know in a few minutes</span></div>
+          <b>→</b>
+        </a>
+      </section>
+
+      <section class="section" id="learn">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">01 / LEARN</span>
+            <h2>Knowledge can help<br><em>you recognise the signs.</em></h2>
+          </div>
+          <p>GBV can take many forms. Understanding warning signs can help you recognise unhealthy behaviour and consider safer choices.</p>
+        </div>
+
+        <div class="learn-grid">
+          <article class="info-card featured">
+            <span class="card-number">01</span>
+            <div class="card-icon">◒</div>
+            <h3>Signs of abuse</h3>
+            <p>Learn about behaviours that may signal emotional, physical, sexual or financial abuse.</p>
+            <button class="text-link learn-more" data-topic="signs">Explore topic <span>→</span></button>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">02</span>
+            <div class="card-icon">◇</div>
+            <h3>Know your rights</h3>
+            <p>Explore basic awareness information about dignity, safety, consent and seeking help.</p>
+            <button class="text-link learn-more" data-topic="rights">Explore topic <span>→</span></button>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">03</span>
+            <div class="card-icon">↗</div>
+            <h3>Safer exit strategies</h3>
+            <p>Think through practical steps that can reduce risk when leaving an unsafe situation.</p>
+            <button class="text-link learn-more" data-topic="exit">Explore topic <span>→</span></button>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">04</span>
+            <div class="card-icon">♡</div>
+            <h3>Supporting someone</h3>
+            <p>Learn how to listen, believe someone and help them explore support without taking control.</p>
+            <button class="text-link learn-more" data-topic="supporting">Explore topic <span>→</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="quiz-section" id="quiz">
+        <div class="quiz-copy">
+          <span class="section-kicker">02 / QUIZ</span>
+          <h2>Learn. Think.<br><em>Know what to do.</em></h2>
+          <p>Challenge yourself with short awareness questions. There is no penalty for getting something wrong — the goal is to learn.</p>
+          <div class="quiz-stat"><strong id="bestScore">0%</strong><span>best score</span></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-top">
+            <span id="quizCount">Question 1 of 5</span>
+            <span id="quizProgressText">20%</span>
+          </div>
+          <div class="progress"><span id="quizProgress"></span></div>
+          <div id="quizContent">
+            <h3 id="quizQuestion"></h3>
+            <div id="quizAnswers" class="answers"></div>
+            <div id="quizFeedback" class="quiz-feedback" aria-live="polite"></div>
+            <button class="btn btn-primary next-btn" id="nextQuestion" hidden>Next question →</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section resources-section" id="resources">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">03 / RESOURCES</span>
+            <h2>Support is closer<br><em>than you think.</em></h2>
+          </div>
+          <p>This prototype includes resource categories for Johannesburg/Gauteng. Verify current contact details before relying on them in an emergency.</p>
+        </div>
+
+        <div class="resource-grid">
+          <article class="resource-card">
+            <div class="resource-icon">✚</div>
+            <div><span class="resource-type">EMERGENCY</span><h3>Police / immediate danger</h3><p>Use your local emergency service when you are in immediate danger.</p></div>
+            <a href="#emergency">View options →</a>
+          </article>
+          <article class="resource-card">
+            <div class="resource-icon">⌂</div>
+            <div><span class="resource-type">SHELTERS</span><h3>Safe accommodation</h3><p>Explore the type of support a shelter or safe house may provide.</p></div>
+            <a href="#emergency">Learn more →</a>
+          </article>
+          <article class="resource-card">
+            <div class="resource-icon">◎</div>
+            <div><span class="resource-type">NGO / SUPPORT</span><h3>Community organisations</h3><p>Find organisations that can offer information, counselling or referrals.</p></div>
+            <a href="#support">Get support →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="support-section" id="support">
+        <div class="support-copy">
+          <span class="section-kicker">04 / PEER SUPPORT</span>
+          <h2>You don't have to<br><em>figure it out alone.</em></h2>
+          <p>Share a thought anonymously in this prototype. Messages are stored only in your browser using local storage.</p>
+          <div class="privacy-pill">◉ No account &nbsp; • &nbsp; Local only</div>
+        </div>
+
+        <div class="chat">
+          <div class="chat-header">
+            <div class="online-dot"></div>
+            <div><strong>SafeRise community</strong><span>Anonymous prototype chat</span></div>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="message received">Welcome. This is a simulated anonymous peer-support space. Be kind and protect your privacy.</div>
+          </div>
+          <form class="chat-form" id="chatForm">
+            <input id="chatInput" maxlength="240" placeholder="Share something anonymously..." autocomplete="off">
+            <button type="submit" aria-label="Send message">↑</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="emergency-section" id="emergency">
+        <div class="emergency-content">
+          <div>
+            <span class="section-kicker">SAFETY FIRST</span>
+            <h2>Are you in immediate danger?</h2>
+            <p>If you are in immediate danger, move to a safer place if you can and contact local emergency services or someone you trust.</p>
+          </div>
+          <button class="btn btn-light" id="emergencyButton">Show emergency options <span>→</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><span class="brand-mark">S</span> SafeRise</div>
+      <p>Awareness • Prevention • Support</p>
+      <small>Prototype only. Powered by Brelinx (brelinx.com)</small>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <span class="section-kicker" id="modalKicker">SAFERISE</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

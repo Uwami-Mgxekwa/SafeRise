@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070a">
+  <meta name="description" content="SafeRise — Anonymous peer support space. No account required. Messages stored only in your browser.">
+  <title>Peer Support — SafeRise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="SafeRise home">
+        <img src="logo.png" alt="SafeRise logo" class="brand-logo">
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="resources.html">Resources</a>
+        <a href="support.html" class="nav-active">Peer Support</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a class="header-help" href="resources.html#emergency">Get help</a>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="resources.html">Resources</a>
+      <a href="support.html">Peer Support</a>
+    </div>
+
+    <main>
+      <!-- Page hero -->
+      <section class="page-hero">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+        <div class="page-hero-copy">
+          <span class="section-kicker">PEER SUPPORT</span>
+          <h1>You don't have to<br><em>figure it out alone.</em></h1>
+          <p>Share a thought anonymously. Messages are stored only in your browser using local storage — nothing is sent to a server. No account required.</p>
+        </div>
+      </section>
+
+      <!-- Main support layout -->
+      <section class="section support-page-section">
+        <div class="support-page-layout">
+
+          <!-- Sidebar info -->
+          <aside class="support-sidebar">
+            <div class="privacy-card">
+              <h3>Your privacy</h3>
+              <ul>
+                <li>◉ No account or login</li>
+                <li>◉ Messages saved in your browser only</li>
+                <li>◉ Nothing is sent to any server</li>
+                <li>◉ Clear your messages any time</li>
+              </ul>
+            </div>
+
+            <div class="support-tips">
+              <h3>A few reminders</h3>
+              <p>This is a prototype simulation of peer support — it is not a live crisis service. If you are in immediate danger, please contact emergency services.</p>
+              <a class="btn btn-ghost" href="resources.html#emergency" style="margin-top:14px;display:inline-flex">Emergency options →</a>
+            </div>
+
+            <button class="btn btn-ghost clear-btn" id="clearMessages">Clear my messages</button>
+          </aside>
+
+          <!-- Chat -->
+          <div class="chat chat-large">
+            <div class="chat-header">
+              <div class="online-dot"></div>
+              <div><strong>SafeRise community</strong><span>Anonymous prototype chat</span></div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+              <div class="message received">Welcome. This is a simulated anonymous peer-support space. Be kind and protect your privacy.</div>
+            </div>
+            <form class="chat-form" id="chatForm">
+              <input id="chatInput" maxlength="240" placeholder="Share something anonymously..." autocomplete="off">
+              <button type="submit" aria-label="Send message">↑</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Support resources strip -->
+      <section class="section support-links-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">NEED MORE SUPPORT?</span>
+            <h2>Real help is<br><em>available.</em></h2>
+          </div>
+          <p>This space is for anonymous reflection. For professional support, these resources can connect you with people who can help.</p>
+        </div>
+        <div class="support-links-grid">
+          <a class="support-link-card" href="resources.html#emergency-contacts">
+            <div class="slc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.08a16 16 0 0 0 6.04 6.04l1.61-1.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Emergency contacts</strong>
+              <span>Police, ambulance and the GBV Command Centre helpline.</span>
+            </div>
+            <b>→</b>
+          </a>
+          <a class="support-link-card" href="resources.html#shelters">
+            <div class="slc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <strong>Shelters</strong>
+              <span>Safe accommodation options in Johannesburg and Gauteng.</span>
+            </div>
+            <b>→</b>
+          </a>
+          <a class="support-link-card" href="resources.html#ngos">
+            <div class="slc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <strong>NGOs &amp; counselling</strong>
+              <span>Organisations that offer counselling, legal aid and referrals.</span>
+            </div>
+            <b>→</b>
+          </a>
+          <a class="support-link-card" href="learn.html#supporting">
+            <div class="slc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <strong>Supporting someone</strong>
+              <span>How to listen and help without taking over.</span>
+            </div>
+            <b>→</b>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img src="logo.png" alt="SafeRise logo" class="footer-logo"></div>
+      <p>Awareness • Prevention • Support</p>
+      <small>Prototype only. Powered by Brelinx (brelinx.com)</small>
+    </footer>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    // Load saved messages
+    const savedMessages = JSON.parse(localStorage.getItem("saferiseMessages") || "[]");
+    const chatMessages = $("chatMessages");
+    savedMessages.forEach(message => addMessage(message, "sent"));
+
+    function addMessage(text, type) {
+      const div = document.createElement("div");
+      div.className = `message ${type}`;
+      div.textContent = text;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    $("chatForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const input = $("chatInput");
+      const value = input.value.trim();
+      if (!value) return;
+      addMessage(value, "sent");
+      const messages = JSON.parse(localStorage.getItem("saferiseMessages") || "[]");
+      messages.push(value);
+      localStorage.setItem("saferiseMessages", JSON.stringify(messages.slice(-30)));
+      input.value = "";
+    });
+
+    $("clearMessages").addEventListener("click", () => {
+      localStorage.removeItem("saferiseMessages");
+      // Remove all sent messages, keep the welcome message
+      const sent = chatMessages.querySelectorAll(".sent");
+      sent.forEach(m => m.remove());
+    });
+
+    const menuToggle = $("menuToggle");
+    const mobileMenu = $("mobileMenu");
+    menuToggle.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+    });
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>

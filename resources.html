@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070a">
+  <meta name="description" content="SafeRise — Find shelters, emergency contacts, NGOs and support organisations in Johannesburg and Gauteng.">
+  <title>Resources — SafeRise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="SafeRise home">
+        <img src="logo.png" alt="SafeRise logo" class="brand-logo">
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="resources.html" class="nav-active">Resources</a>
+        <a href="support.html">Peer Support</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a class="header-help" href="#emergency">Get help</a>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="resources.html">Resources</a>
+      <a href="support.html">Peer Support</a>
+    </div>
+
+    <main>
+      <!-- Page hero -->
+      <section class="page-hero">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+        <div class="page-hero-copy">
+          <span class="section-kicker">RESOURCES</span>
+          <h1>Support is closer<br><em>than you think.</em></h1>
+          <p>Resources for Johannesburg and Gauteng. This is a prototype — always verify current contact details before relying on them in an emergency.</p>
+        </div>
+      </section>
+
+      <!-- Emergency -->
+      <section class="emergency-section" id="emergency">
+        <div class="emergency-content">
+          <div>
+            <span class="section-kicker">SAFETY FIRST</span>
+            <h2>Are you in immediate danger?</h2>
+            <p>If you are in immediate danger, move to a safer place if you can and contact emergency services or someone you trust.</p>
+          </div>
+          <button class="btn btn-light" id="emergencyButton">Show emergency options <span>→</span></button>
+        </div>
+      </section>
+
+      <!-- Emergency contacts -->
+      <section class="section" id="emergency-contacts">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">01 / EMERGENCY CONTACTS</span>
+            <h2>Call for help<br><em>right now.</em></h2>
+          </div>
+          <p>These are general emergency numbers. Verify them locally before you need them.</p>
+        </div>
+
+        <div class="contacts-grid">
+          <div class="contact-card danger-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.08a16 16 0 0 0 6.04 6.04l1.61-1.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>South African Police Service (SAPS)</h3>
+            <p>For immediate police assistance in any emergency.</p>
+            <a class="contact-number" href="tel:10111">10111</a>
+            <span class="contact-note">Available 24/7 nationwide</span>
+          </div>
+          <div class="contact-card danger-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.08a16 16 0 0 0 6.04 6.04l1.61-1.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Emergency Medical Services</h3>
+            <p>For medical emergencies and ambulance services.</p>
+            <a class="contact-number" href="tel:10177">10177</a>
+            <span class="contact-note">Available 24/7 nationwide</span>
+          </div>
+          <div class="contact-card danger-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.08a16 16 0 0 0 6.04 6.04l1.61-1.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>GBV Command Centre</h3>
+            <p>National 24-hour helpline for gender-based violence. Call, SMS or WhatsApp.</p>
+            <a class="contact-number" href="tel:0800428428">0800 428 428</a>
+            <span class="contact-note">Free call · 24/7 · SMS 'Help' to 31531</span>
+          </div>
+          <div class="contact-card danger-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.08a16 16 0 0 0 6.04 6.04l1.61-1.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Childline South Africa</h3>
+            <p>Support for children in distress or danger. Free and confidential.</p>
+            <a class="contact-number" href="tel:116">116</a>
+            <span class="contact-note">Free call · Available 24/7</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shelters -->
+      <section class="section resources-section" id="shelters">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">02 / SHELTERS</span>
+            <h2>Safe places<br><em>to stay.</em></h2>
+          </div>
+          <p>Shelters provide temporary accommodation, counselling and support. Availability varies — contact directly to confirm space and services.</p>
+        </div>
+
+        <div class="resource-detail-grid">
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">SHELTER · JOHANNESBURG</span>
+                <h3>Usindiso Ministries</h3>
+              </div>
+            </div>
+            <p>Provides shelter, food, trauma counselling and skills development for women and children affected by GBV.</p>
+            <div class="rdc-details">
+              <span class="detail-loc">Johannesburg CBD</span>
+              <span class="detail-tel">011 336 3302</span>
+            </div>
+          </article>
+
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">SHELTER · JOHANNESBURG</span>
+                <h3>POWA (People Opposing Women Abuse)</h3>
+              </div>
+            </div>
+            <p>Offers a safe shelter, legal support, counselling and advocacy for women experiencing abuse.</p>
+            <div class="rdc-details">
+              <span class="detail-loc">Johannesburg</span>
+              <span class="detail-tel">011 642 4345</span>
+            </div>
+          </article>
+
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">SHELTER · GAUTENG</span>
+                <h3>Saartjie Baartman Centre</h3>
+              </div>
+            </div>
+            <p>A multi-service centre providing emergency shelter, legal aid and long-term support for survivors of domestic violence.</p>
+            <div class="rdc-details">
+              <span class="detail-loc">Gauteng</span>
+              <span class="detail-tel">Verify current number locally</span>
+            </div>
+          </article>
+
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">SHELTER · GAUTENG</span>
+                <h3>Huis Maranata</h3>
+              </div>
+            </div>
+            <p>Provides short-term shelter and counselling for women and children fleeing domestic violence situations.</p>
+            <div class="rdc-details">
+              <span class="detail-loc">Gauteng</span>
+              <span class="detail-tel">Verify current number locally</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- NGOs & Support -->
+      <section class="section resources-section" id="ngos">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">03 / NGOs &amp; SUPPORT ORGANISATIONS</span>
+            <h2>Professional<br><em>support &amp; counselling.</em></h2>
+          </div>
+          <p>These organisations can offer counselling, legal information, referrals and other forms of support.</p>
+        </div>
+
+        <div class="resource-detail-grid">
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">COUNSELLING &amp; LEGAL</span>
+                <h3>Rape Crisis Cape Town Trust</h3>
+              </div>
+            </div>
+            <p>Provides counselling, legal support and advocacy for survivors of sexual violence. Offers a national helpline.</p>
+            <div class="rdc-details">
+              <span class="detail-web">rapecrisis.org.za</span>
+              <span class="detail-tel">021 447 9762</span>
+            </div>
+          </article>
+
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">COUNSELLING</span>
+                <h3>SAPS Family Violence, Child Protection &amp; Sexual Offences Unit</h3>
+              </div>
+            </div>
+            <p>Specialised police unit for GBV, child abuse and sexual offences. Available at most SAPS stations.</p>
+            <div class="rdc-details">
+              <span class="detail-tel">10111 (emergency)</span>
+              <span class="detail-loc">Most SAPS stations</span>
+            </div>
+          </article>
+
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">LEGAL AID</span>
+                <h3>Legal Aid South Africa</h3>
+              </div>
+            </div>
+            <p>Provides free legal services to people who cannot afford a lawyer, including domestic violence matters.</p>
+            <div class="rdc-details">
+              <span class="detail-web">legal-aid.co.za</span>
+              <span class="detail-tel">0800 110 110</span>
+            </div>
+          </article>
+
+          <article class="resource-detail-card">
+            <div class="rdc-header">
+              <div class="resource-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <span class="resource-type">COUNSELLING &amp; SUPPORT</span>
+                <h3>LifeLine South Africa</h3>
+              </div>
+            </div>
+            <p>Offers 24-hour counselling, crisis intervention and referral services for people in distress.</p>
+            <div class="rdc-details">
+              <span class="detail-tel">0861 322 322</span>
+              <span class="detail-loc">Branches nationwide</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Disclaimer -->
+      <section class="section">
+        <div class="disclaimer-box">
+          <span class="disclaimer-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </span>
+          <div>
+            <h3>Important notice</h3>
+            <p>SafeRise is a prototype. The contact details and organisation information listed here were included for awareness purposes and may be out of date. Always verify current contact information through official channels before relying on it in an emergency. If you are in immediate danger, call <strong>10111</strong> or <strong>10177</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA strip -->
+      <section class="page-cta-strip">
+        <div>
+          <h2>Need someone to talk to?</h2>
+          <p>The anonymous peer support space is available in your browser — no account required.</p>
+        </div>
+        <a class="btn btn-primary" href="support.html">Go to peer support <span>→</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img src="logo.png" alt="SafeRise logo" class="footer-logo"></div>
+      <p>Awareness • Prevention • Support</p>
+      <small>Prototype only. Powered by Brelinx (brelinx.com)</small>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <span class="section-kicker" id="modalKicker">SAFERISE</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function openModal(title, body) {
+      $("modalTitle").textContent = title;
+      $("modalBody").innerHTML = body;
+      $("modalBackdrop").hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      $("modalBackdrop").hidden = true;
+      document.body.style.overflow = "";
+    }
+
+    $("modalClose").addEventListener("click", closeModal);
+    $("modalBackdrop").addEventListener("click", e => {
+      if (e.target === $("modalBackdrop")) closeModal();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    $("emergencyButton").addEventListener("click", () => {
+      openModal("Emergency options", `
+        <p><strong>If you are in immediate danger:</strong></p>
+        <ul>
+          <li>Move to a safer place if you can do so safely.</li>
+          <li>Call <strong>10111</strong> (SAPS) or <strong>10177</strong> (ambulance).</li>
+          <li>Contact the GBV Command Centre: <strong>0800 428 428</strong> (free, 24/7).</li>
+          <li>If possible, contact someone you trust and tell them where you are.</li>
+        </ul>
+        <p class="modal-note">SafeRise is a prototype and does not place calls or provide live crisis response. Always verify current local contact details.</p>
+      `);
+    });
+
+    const menuToggle = $("menuToggle");
+    const mobileMenu = $("mobileMenu");
+    menuToggle.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+    });
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>

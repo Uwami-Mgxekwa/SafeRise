@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070a">
+  <meta name="description" content="SafeRise — Test your GBV awareness with a short quiz.">
+  <title>Quiz — SafeRise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="SafeRise home">
+        <img src="logo.png" alt="SafeRise logo" class="brand-logo">
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html" class="nav-active">Quiz</a>
+        <a href="resources.html">Resources</a>
+        <a href="support.html">Peer Support</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a class="header-help" href="resources.html#emergency">Get help</a>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="resources.html">Resources</a>
+      <a href="support.html">Peer Support</a>
+    </div>
+
+    <main>
+      <!-- Page hero -->
+      <section class="page-hero">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+        <div class="page-hero-copy">
+          <span class="section-kicker">QUIZ</span>
+          <h1>Learn. Think.<br><em>Know what to do.</em></h1>
+          <p>Challenge yourself with short awareness questions. There is no penalty for getting something wrong — the goal is to learn, not to score perfectly.</p>
+        </div>
+      </section>
+
+      <!-- Quiz -->
+      <section class="section quiz-page-section">
+        <div class="quiz-page-layout">
+
+          <aside class="quiz-sidebar">
+            <div class="quiz-stat-card">
+              <span class="section-kicker">YOUR BEST</span>
+              <div class="big-stat"><strong id="bestScore">0%</strong></div>
+              <span class="stat-label">best score this browser</span>
+            </div>
+            <div class="quiz-tips">
+              <h3>How it works</h3>
+              <ul>
+                <li>5 awareness questions.</li>
+                <li>Choose the best answer.</li>
+                <li>Read the explanation after each question.</li>
+                <li>Your best score is saved locally in your browser.</li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost" href="learn.html">Study first →</a>
+          </aside>
+
+          <div class="quiz-box quiz-box-large">
+            <div class="quiz-top">
+              <span id="quizCount">Question 1 of 5</span>
+              <span id="quizProgressText">20%</span>
+            </div>
+            <div class="progress"><span id="quizProgress"></span></div>
+            <div id="quizContent">
+              <h3 id="quizQuestion"></h3>
+              <div id="quizAnswers" class="answers"></div>
+              <div id="quizFeedback" class="quiz-feedback" aria-live="polite"></div>
+              <button class="btn btn-primary next-btn" id="nextQuestion" hidden>Next question →</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA strip -->
+      <section class="page-cta-strip">
+        <div>
+          <h2>Want to learn more?</h2>
+          <p>Go deeper on the topics covered in the quiz.</p>
+        </div>
+        <a class="btn btn-primary" href="learn.html">Explore learning <span>→</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img src="logo.png" alt="SafeRise logo" class="footer-logo"></div>
+      <p>Awareness • Prevention • Support</p>
+      <small>Prototype only. Powered by Brelinx (brelinx.com)</small>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <span class="section-kicker" id="modalKicker">SAFERISE</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const quizzes = [
+      {
+        q: "Which statement best describes consent?",
+        a: ["Consent is assumed in a relationship.", "Consent must be freely given and can be withdrawn.", "Consent only matters the first time.", "Silence always means yes."],
+        c: 1,
+        e: "Consent should be freely given. A person can change their mind at any time."
+      },
+      {
+        q: "Which can be a sign of controlling behaviour?",
+        a: ["Respecting someone's boundaries.", "Encouraging healthy friendships.", "Demanding access to someone's messages and isolating them.", "Listening when someone says no."],
+        c: 2,
+        e: "Monitoring messages and isolating someone can be warning signs of controlling behaviour."
+      },
+      {
+        q: "If someone tells you they are experiencing abuse, what is a helpful first response?",
+        a: ["Blame them for staying.", "Listen, believe them and ask how you can support them.", "Immediately confront the person accused.", "Tell everyone you know."],
+        c: 1,
+        e: "Listening, avoiding blame and asking what support they want can help preserve their safety and control."
+      },
+      {
+        q: "What is an important consideration when planning to leave an unsafe situation?",
+        a: ["Announce your plan publicly.", "Safety planning and identifying a safer place.", "Delete every contact immediately.", "Confront the person alone."],
+        c: 1,
+        e: "Leaving can carry risks. Thinking through a safer place and support options can be important."
+      },
+      {
+        q: "What should you do if you are in immediate danger?",
+        a: ["Stay and argue until the situation improves.", "Prioritise getting somewhere safer and seek emergency help.", "Post your location publicly.", "Ignore the danger."],
+        c: 1,
+        e: "When immediate danger exists, prioritise safety and contact appropriate emergency support."
+      }
+    ];
+
+    let quizIndex = 0;
+    let score = 0;
+    let answered = false;
+
+    const $ = (id) => document.getElementById(id);
+
+    function openModal(title, body) {
+      $("modalTitle").textContent = title;
+      $("modalBody").innerHTML = body;
+      $("modalBackdrop").hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      $("modalBackdrop").hidden = true;
+      document.body.style.overflow = "";
+    }
+
+    $("modalClose").addEventListener("click", closeModal);
+    $("modalBackdrop").addEventListener("click", e => {
+      if (e.target === $("modalBackdrop")) closeModal();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    function renderQuiz() {
+      const item = quizzes[quizIndex];
+      answered = false;
+      $("quizCount").textContent = `Question ${quizIndex + 1} of ${quizzes.length}`;
+      $("quizProgressText").textContent = `${Math.round(((quizIndex + 1) / quizzes.length) * 100)}%`;
+      $("quizProgress").style.width = `${((quizIndex + 1) / quizzes.length) * 100}%`;
+      $("quizQuestion").textContent = item.q;
+      $("quizFeedback").textContent = "";
+      $("nextQuestion").hidden = true;
+      $("nextQuestion").textContent = quizIndex === quizzes.length - 1 ? "See my result →" : "Next question →";
+
+      const answers = $("quizAnswers");
+      answers.innerHTML = "";
+      item.a.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.className = "answer";
+        button.textContent = answer;
+        button.addEventListener("click", () => chooseAnswer(index));
+        answers.appendChild(button);
+      });
+    }
+
+    function chooseAnswer(index) {
+      if (answered) return;
+      answered = true;
+      const item = quizzes[quizIndex];
+      const buttons = [...document.querySelectorAll(".answer")];
+      buttons.forEach(b => b.disabled = true);
+      buttons[item.c].classList.add("correct");
+      if (index === item.c) {
+        score++;
+        $("quizFeedback").textContent = "Correct — " + item.e;
+      } else {
+        buttons[index].classList.add("wrong");
+        $("quizFeedback").textContent = "Not quite — " + item.e;
+      }
+      $("nextQuestion").hidden = false;
+    }
+
+    $("nextQuestion").addEventListener("click", () => {
+      if (quizIndex === quizzes.length - 1) {
+        const percentage = Math.round((score / quizzes.length) * 100);
+        const previous = Number(localStorage.getItem("saferiseBestScore") || 0);
+        if (percentage > previous) localStorage.setItem("saferiseBestScore", percentage);
+        $("bestScore").textContent = `${Math.max(percentage, previous)}%`;
+        openModal("Quiz complete", `<p>You scored <strong>${score} / ${quizzes.length}</strong> (${percentage}%).</p>
+          <p style="margin-top:12px">Keep learning — the goal of SafeRise is awareness, not perfection.</p>
+          <p class="modal-note">You can close this window and take the quiz again whenever you want.</p>`);
+        quizIndex = 0;
+        score = 0;
+        renderQuiz();
+      } else {
+        quizIndex++;
+        renderQuiz();
+      }
+    });
+
+    $("bestScore").textContent = `${Number(localStorage.getItem("saferiseBestScore") || 0)}%`;
+    renderQuiz();
+
+    const menuToggle = $("menuToggle");
+    const mobileMenu = $("mobileMenu");
+    menuToggle.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+    });
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>
